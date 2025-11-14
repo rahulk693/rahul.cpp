@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class employee{
+    private:
+    float grosssalary;
+    float basicsalary;
+    public:
+    void setsalary(){
+        cout<<"Amount of Basic Salary:-";
+        cin>>basicsalary;
+        float TA,DA;
+      TA=basicsalary*0.15;
+      DA=basicsalary*0.3;
+      grosssalary=basicsalary+TA+DA;
+    }
+    void Display();
+    };
+    void employee::Display(){
+        cout<<"GrossSalary is:-"<<grosssalary<<endl;
+        cout<<"BasicSalary is:-"<<basicsalary<<endl;
+    }
+    int main(){
+        employee emp;
+        emp.setsalary();
+        emp.Display();
+        return 0;
+    }
